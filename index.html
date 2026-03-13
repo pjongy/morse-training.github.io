@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Morse Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LEARN VIEW -->
+  <div id="learn-view">
+
+    <header>
+      <div class="score-display">
+        <span id="score-text">0 / 0</span>
+        <span id="streak-text"></span>
+      </div>
+      <div class="speed-controls">
+        <span class="dim">speed</span>
+        <button class="btn-small" id="speed-down">－</button>
+        <span id="speed-display">15 WPM</span>
+        <button class="btn-small" id="speed-up">＋</button>
+        <button id="replay-btn" class="btn-replay">🔊</button>
+      </div>
+    </header>
+
+    <!-- Target vs Input cards -->
+    <div id="cards-panel">
+      <div class="card" id="target-card">
+        <div class="card-label">target</div>
+        <div class="card-letter" id="current-letter">?</div>
+        <div class="card-morse" id="target-morse"></div>
+      </div>
+      <div class="card" id="user-card">
+        <div class="card-label">input</div>
+        <div class="card-letter" id="user-decoded">—</div>
+        <div class="card-morse" id="user-morse"></div>
+      </div>
+    </div>
+
+    <div id="feedback-banner"></div>
+
+    <!-- Timing panel -->
+    <div id="timing-panel">
+      <div id="timing-entries"></div>
+    </div>
+
+    <!-- Press area -->
+    <div id="press-area" class="press-idle">
+      <div id="press-hint">
+        <div class="hint-row"><span class="hint-dot"></span><strong>short</strong> = dit</div>
+        <div class="hint-row"><span class="hint-dash"></span><strong>long</strong> = dah</div>
+        <div class="dim" style="margin-top:0.5rem;font-size:0.75rem">space bar works too</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
