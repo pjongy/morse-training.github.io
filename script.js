@@ -11,7 +11,7 @@ const MORSE = {
   5:'.....',6:'-....',7:'--...',8:'---..',9:'----.'
 };
 const REVERSE = Object.fromEntries(Object.entries(MORSE).map(([k, v]) => [v, k]));
-const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
 
 // ── Audio ─────────────────────────────────────────────────────────────────────
 let audioCtx     = null;
